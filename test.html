@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Test - Air Canvas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #121212;
+            color: #00ff88;
+        }
+        .status {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #00ff88;
+        }
+        .success { background: rgba(0, 255, 136, 0.1); }
+        .error { background: rgba(255, 0, 0, 0.1); border-color: #ff0080; }
+        a { color: #00ff88; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Air Canvas - Site Status Test</h1>
+    
+    <div class="status success">
+        <h2>✅ Site is Live!</h2>
+        <p>If you can see this page, GitHub Pages is working correctly.</p>
+        <p><strong>URL:</strong> <a href="index.html">Go to Air Canvas App</a></p>
+    </div>
+
+    <div class="status">
+        <h2>📋 Quick Checks:</h2>
+        <ul>
+            <li>✅ HTML is loading</li>
+            <li>✅ GitHub Pages is active</li>
+            <li>✅ Files are accessible</li>
+        </ul>
+    </div>
+
+    <div class="status">
+        <h2>🔧 If Main App Doesn't Load:</h2>
+        <ol>
+            <li><strong>Hard Refresh:</strong> Press <code>Ctrl+Shift+R</code> (Windows) or <code>Cmd+Shift+R</code> (Mac)</li>
+            <li><strong>Clear Cache:</strong> Go to browser settings → Clear browsing data</li>
+            <li><strong>Try Incognito:</strong> Open in private/incognito mode</li>
+            <li><strong>Check Console:</strong> Press F12 → Console tab → Look for errors</li>
+        </ol>
+    </div>
+
+    <div class="status">
+        <h2>📱 Test Links:</h2>
+        <ul>
+            <li><a href="index.html">Main Application</a></li>
+            <li><a href="README.md">README</a></li>
+            <li><a href="TROUBLESHOOTING.md">Troubleshooting Guide</a></li>
+        </ul>
+    </div>
+
+    <script>
+        console.log('✅ Test page loaded successfully!');
+        console.log('Current URL:', window.location.href);
+        console.log('If you see this, JavaScript is working!');
+    </script>
+</body>
+</html>
+
