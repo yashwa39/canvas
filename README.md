@@ -54,21 +54,46 @@ Once GitHub Pages is enabled, visit: `https://yashwa39.github.io/canvas/`
 ## Setup & Installation
 
 ### Option 1: Use GitHub Pages (Recommended)
-Follow the instructions above to enable GitHub Pages - no local setup needed!
+Follow the instructions above to enable GitHub Pages - no local setup needed! The CDN links will automatically load all dependencies.
 
-### Option 2: Run Locally
+### Option 2: Local Development with npm
 
-1. Clone the repository:
+1. **Install Node.js** (if not already installed): [Download Node.js](https://nodejs.org/)
+
+2. **Clone the repository:**
 ```bash
 git clone https://github.com/yashwa39/canvas.git
 cd canvas
 ```
 
-2. Open `index.html` in a modern web browser (Chrome, Edge, or Firefox recommended)
+3. **Install all dependencies:**
+```bash
+npm install
+```
 
-3. Grant camera permissions when prompted
+This installs:
+- MediaPipe Hands libraries
+- Local development server
 
-4. Start drawing with hand gestures!
+4. **Start local server:**
+```bash
+npm start
+```
+
+5. **Open in browser:**
+   - For CDN version: `http://localhost:8080/index.html`
+   - For local libraries: `http://localhost:8080/setup-local.html`
+
+6. Grant camera permissions when prompted
+
+7. Start drawing with hand gestures!
+
+### Option 3: Quick Start (No Installation)
+
+1. Clone the repository
+2. Open `index.html` directly in your browser (uses CDN)
+
+**Note:** For detailed installation instructions, see [INSTALL.md](INSTALL.md)
 
 ## Usage
 

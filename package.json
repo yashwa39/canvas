@@ -1,0 +1,29 @@
+{
+  "name": "air-canvas",
+  "version": "1.0.0",
+  "description": "Hand gesture-controlled drawing application with MediaPipe Hands and Gemini AI",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -c-1",
+    "dev": "npx http-server -p 8080 -c-1 -o"
+  },
+  "keywords": [
+    "hand-tracking",
+    "gesture-recognition",
+    "canvas",
+    "mediapipe",
+    "drawing"
+  ],
+  "author": "yashwa39",
+  "license": "MIT",
+  "dependencies": {
+    "@mediapipe/camera_utils": "^0.3.1640029074",
+    "@mediapipe/control_utils": "^0.6.1629159506",
+    "@mediapipe/drawing_utils": "^0.3.1619994837",
+    "@mediapipe/hands": "^0.4.1675469240"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+

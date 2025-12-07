@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Canvas - Hand Gesture Drawing (Local)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h1>Welcome to Air Canvas ✨</h1>
+            <div class="instruction-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Grant Camera Access</p>
+                    <button id="enableCameraBtn" class="primary-btn">Enable Camera</button>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Place your hand in front of the camera</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Pinch your Index Finger and Thumb to draw</p>
+                    <div class="gesture-demo">✏️ Pinch Gesture</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <p>Use a Fist to erase</p>
+                    <div class="gesture-demo">🧼 Fist Gesture</div>
+                </div>
+            </div>
+            <button id="startDrawingBtn" class="primary-btn" style="display: none;">Start Drawing</button>
+        </div>
+    </div>
+
+    <!-- Status Bar (Top-Center) -->
+    <div id="statusBar" class="status-bar">
+        <span id="statusText">Waiting for Hand Gesture...</span>
+    </div>
+
+    <!-- Main Canvas -->
+    <canvas id="drawingCanvas"></canvas>
+
+    <!-- Webcam Feed (Bottom-Left) -->
+    <div class="webcam-container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="webcamCanvas"></canvas>
+    </div>
+
+    <!-- Control Panel (Bottom-Right) -->
+    <div class="control-panel">
+        <div class="panel-section">
+            <label>Color</label>
+            <input type="color" id="colorPicker" value="#00ff88">
+        </div>
+        <div class="panel-section">
+            <label>Brush Size</label>
+            <input type="range" id="brushSize" min="2" max="30" value="5">
+            <span id="brushSizeValue">5</span>
+        </div>
+        <div class="panel-section">
+            <button id="saveBtn" class="icon-btn" title="Save">💾</button>
+            <button id="undoBtn" class="icon-btn" title="Undo">↶</button>
+            <button id="redoBtn" class="icon-btn" title="Redo">↷</button>
+        </div>
+    </div>
+
+    <!-- Gesture Reminders (Center) -->
+    <div id="gestureReminder" class="gesture-reminder">
+        <div class="reminder-content">
+            <div class="reminder-gesture">✏️</div>
+            <p>Pinch to Draw</p>
+        </div>
+    </div>
+
+    <!-- Gemini AI Integration -->
+    <div id="geminiPanel" class="gemini-panel">
+        <button id="geminiToggle" class="gemini-toggle">🤖 AI</button>
+        <div id="geminiContent" class="gemini-content" style="display: none;">
+            <h3>AI Assistant</h3>
+            <div id="geminiMessages" class="gemini-messages"></div>
+            <input type="text" id="geminiInput" placeholder="Ask AI about your drawing..." />
+            <button id="geminiSend">Send</button>
+        </div>
+    </div>
+
+    <!-- MediaPipe Hands Scripts (Local) -->
+    <script src="libs/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="libs/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="libs/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="libs/@mediapipe/hands/hands.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

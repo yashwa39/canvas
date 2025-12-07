@@ -99,9 +99,15 @@ async function initMediaPipe() {
         return;
     }
     
+    // Check if local files exist, otherwise use CDN
+    const useLocalFiles = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    
     hands = new Hands({
         locateFile: (file) => {
-            return `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469404/${file}`;
+            if (useLocalFiles) {
+                return `libs/@mediapipe/hands/${file}`;
+            }
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/${file}`;
         }
     });
 
