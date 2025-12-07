@@ -34,7 +34,29 @@ A futuristic, real-time hand gesture-controlled drawing application built with M
 - **Gemini AI API**: AI-powered assistant integration
 - **Vanilla JavaScript**: No framework dependencies
 
+## 🌐 Live Demo
+
+**The application is ready to run on GitHub Pages!**
+
+Once GitHub Pages is enabled, visit: `https://yashwa39.github.io/canvas/`
+
+### Enable GitHub Pages:
+
+1. Go to your repository: https://github.com/yashwa39/canvas
+2. Click on **Settings** (top menu)
+3. Scroll down to **Pages** (left sidebar)
+4. Under **Source**, select **Deploy from a branch**
+5. Choose **main** branch and **/ (root)** folder
+6. Click **Save**
+7. Wait 1-2 minutes for GitHub to deploy
+8. Your site will be live at: `https://yashwa39.github.io/canvas/`
+
 ## Setup & Installation
+
+### Option 1: Use GitHub Pages (Recommended)
+Follow the instructions above to enable GitHub Pages - no local setup needed!
+
+### Option 2: Run Locally
 
 1. Clone the repository:
 ```bash
